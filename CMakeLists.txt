@@ -150,8 +150,8 @@ add_dependencies(ik_service ${ik_service_EXPORTED_TARGETS} ${catkin_EXPORTED_TAR
 add_dependencies(ik_client ${ik_client_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(ik_service_node ${catkin_LIBRARIES})
-target_link_libraries(ik_client_node ${catkin_LIBRARIES})
+target_link_libraries(ik_service ${catkin_LIBRARIES})
+target_link_libraries(ik_client ${catkin_LIBRARIES})
 
 #############
 ## Install ##
