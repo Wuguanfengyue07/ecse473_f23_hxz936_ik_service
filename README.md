@@ -20,6 +20,12 @@ In another terminal, run the client: rosrun ik_service ik_client_node
 
 The ik_service node receives pose requests and returns processed results. After starting the service, send requests through the ik_client node and observe the responses.
 
+"roscore &"
+
+"roslaunch ik_service ik_service.launch "
+
+Then, use the " rosservice call /pose_ik ik_service/PoseIK {...} "
+
 # Functionality Verification
 When running the ik_client node, you should see output like the following in the console:
 
