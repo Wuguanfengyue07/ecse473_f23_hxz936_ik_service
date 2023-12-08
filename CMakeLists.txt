@@ -135,8 +135,8 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(ik_service_node src/ik_service.cpp)
-add_executable(ik_client_node src/ik_client.cpp)
+add_executable(ik_service src/ik_service.cpp)
+add_executable(ik_client src/ik_client.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -146,8 +146,8 @@ add_executable(ik_client_node src/ik_client.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-add_dependencies(ik_service_node ${ik_service_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(ik_client_node ${ik_client_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(ik_service ${ik_service_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(ik_client ${ik_client_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(ik_service_node ${catkin_LIBRARIES})
